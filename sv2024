@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Poemas de Amor</title>
+</head>
+<body>
+    <h1>Generador de Poemas de Amor</h1>
+    <button onclick="generarPoema()">Generar Poema</button>
+    <p id="poema"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+const versos = [
+    "Tus ojos brillan como estrellas en la noche",
+    "Tu sonrisa ilumina mi mundo entero",
+    "En cada latido, mi corazón susurra tu nombre",
+    "Eres la melodía que alegra mis días",
+    "Contigo, el amor florece como un jardín en primavera"
+];
+
+function generarPoema() {
+    const indice = Math.floor(Math.random() * versos.length);
+    const poema = versos[indice];
+    document.getElementById("poema").innerText = poema;
+}
